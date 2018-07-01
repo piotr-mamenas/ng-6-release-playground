@@ -1,11 +1,18 @@
 <mat-sidenav-container class='app-side-nav'>
   <mat-sidenav #sidenav mode='side' [(opened)]="sidenavOpened">
     <ul>
-      <li><a routerLink="">Home</a></li>
+      <a routerLink=''>
+        <span class='fa fa-2x fa-cogs'></span>
+      </a>
     </ul>
   </mat-sidenav>
   <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">Open</button></p>
+    <p>
+      <button mat-button (click)="sidenav.toggle()">
+        <span class='fa fa-2x fa-caret-square-o-left' *ngIf='sidenavOpened'></span>
+        <span class='fa fa-2x fa-caret-square-o-right' *ngIf='!sidenavOpened'></span>
+      </button>
+    </p>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
