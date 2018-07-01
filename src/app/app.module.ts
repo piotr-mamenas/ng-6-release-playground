@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home.component';
+import { NotFoundComponent } from './not-found.component';
 
 import { routing } from './app.routing';
 
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSidenavModule } from '@angular/material';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     SharedModule,
+    MatSidenavModule,
     routing,
     BrowserAnimationsModule
   ],
