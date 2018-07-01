@@ -1,1 +1,44 @@
-Home
+<table mat-table [dataSource]='dataSource'>
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> Id. </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id. </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="english">
+    <th mat-header-cell *matHeaderCellDef> English </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.english }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="deutsch">
+    <th mat-header-cell *matHeaderCellDef> Deutsch </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.deutsch }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="francais">
+    <th mat-header-cell *matHeaderCellDef> Francais </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.francais }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="espanol">
+    <th mat-header-cell *matHeaderCellDef> Espanol </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.espanol }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="italiano">
+    <th mat-header-cell *matHeaderCellDef> Italiano </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.italiano }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="polski">
+    <th mat-header-cell *matHeaderCellDef> Polski </th>
+    <td mat-cell *matCellDef='let row'>  {{ row.polski }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

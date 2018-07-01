@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material';
+import { MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatSidenavModule } from '@angular/material';
     SharedModule,
     MatSidenavModule,
     MatButtonModule,
+    MatTableModule,
     routing,
     BrowserAnimationsModule
   ],
