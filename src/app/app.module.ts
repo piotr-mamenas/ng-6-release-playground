@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatButtonModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MatSidenavModule } from '@angular/material';
   imports: [
     SharedModule,
     MatSidenavModule,
+    MatButtonModule,
     routing,
     BrowserAnimationsModule
   ],
