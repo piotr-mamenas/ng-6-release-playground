@@ -8,4 +8,8 @@
 
 .fa {
   color: #f00;
+
+  &:hover {
+    color: #AAF;
+  }
 }

@@ -1,9 +1,21 @@
 <mat-sidenav-container class='app-side-nav'>
   <mat-sidenav #sidenav mode='side' [(opened)]="sidenavOpened">
     <ul>
-      <a routerLink=''>
-        <span class='fa fa-2x fa-cogs'></span>
-      </a>
+      <li>
+        <a routerLink=''>
+          <span class='fa fa-2x fa-home'></span> Home
+        </a>
+      </li>
+      <li>
+        <a routerLink='guess'>
+          <span class='fa fa-2x fa-question'></span> Guess Train
+        </a>
+      </li>
+      <li>
+        <a routerLink=''>
+          <span class='fa fa-2x fa-cogs'></span> Settings
+        </a>
+      </li>
     </ul>
   </mat-sidenav>
   <mat-sidenav-content>

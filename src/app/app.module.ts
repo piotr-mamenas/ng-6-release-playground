@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found.component';
 import { routing } from './app.routing';
 
 import { SharedModule } from './shared/shared.module';
+import { TrainerModule } from './trainer/trainer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material';
@@ -22,6 +23,7 @@ import { MatTableModule } from '@angular/material';
   ],
   imports: [
     SharedModule,
+    TrainerModule,
     MatSidenavModule,
     MatButtonModule,
     MatTableModule,
