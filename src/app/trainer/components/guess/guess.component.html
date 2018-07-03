@@ -1,5 +1,13 @@
 <div id='trainer-guess'>
-  <mat-form-field>
-    <input matInput>
-  </mat-form-field>
+  <form [formGroup]='guessForm' (ngSubmit)='commitGuess()'>
+    <mat-form-field>
+      <mat-label>Guess</mat-label>
+      <input matInput formControlName='guessedPhrase' required>
+      <mat-error>
+        <span *ngIf="guessForm.get('guessedPhrase').value.invalid && guessForm.get('guessedPhrase').value.touched">Guessed phrase cannot be empty</span>
+      </mat-error>
+    </mat-form-field>
+    <button mat-button><span class='fa fa-check'></span> Commit</button>
+    <button type='button' mat-button (click)="overrideGuess()"><span class='fa fa-repeat'></span> Override</button>
+  </form>
 </div>
