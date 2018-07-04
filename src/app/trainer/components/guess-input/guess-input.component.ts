@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'trainer-guess',
-  templateUrl: './guess.component.html',
-  styleUrls: ['./guess.component.scss']
+  selector: 'trainer-guess-input',
+  templateUrl: './guess-input.component.html',
+  styleUrls: ['./guess-input.component.scss']
 })
-export class GuessComponent {
+export class GuessInputComponent {
   isCommitted : boolean = false;
 
   guessForm = new FormGroup({

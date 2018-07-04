@@ -10,7 +10,9 @@ import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 
 // MODULE COMPONENTS
-import { GuessComponent } from './components/guess/guess.component';
+import { GuessInputComponent } from './components/guess-input/guess-input.component';
+import { AnswerDisplayComponent } from './components/answer-display/answer-display.component';
+import { TrainerComponent } from './trainer.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { GuessComponent } from './components/guess/guess.component';
     MatCardModule
   ],
   declarations: [
-    GuessComponent
+    GuessInputComponent,
+    AnswerDisplayComponent,
+    TrainerComponent
   ],
   exports: [
   ]
