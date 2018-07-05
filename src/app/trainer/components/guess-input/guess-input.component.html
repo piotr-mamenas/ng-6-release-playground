@@ -1,4 +1,76 @@
+
 <div id='trainer-guess'>
+  From:
+  <mat-button-toggle-group id='trainer-guess-language-from' #languageFromSelected='matButtonToggleGroup'>
+    <mat-button-toggle value='english'>
+      EN
+    </mat-button-toggle>
+
+    <mat-button-toggle value='german'>
+      DE
+    </mat-button-toggle>
+
+    <mat-button-toggle value='french'>
+      FR
+    </mat-button-toggle>
+
+    <mat-button-toggle value='spanish'>
+      ES
+    </mat-button-toggle>
+
+    <mat-button-toggle value='italian'>
+      IT
+    </mat-button-toggle>
+
+    <mat-button-toggle value='polish'>
+      PL
+    </mat-button-toggle>
+
+  </mat-button-toggle-group>
+
+  To:
+  <mat-button-toggle-group id='trainer-guess-language-to' #languageToSelected='matButtonToggleGroup'>
+    <mat-button-toggle value='english'>
+      EN
+    </mat-button-toggle>
+
+    <mat-button-toggle value='german'>
+      DE
+    </mat-button-toggle>
+
+    <mat-button-toggle value='french'>
+      FR
+    </mat-button-toggle>
+
+    <mat-button-toggle value='spanish'>
+      ES
+    </mat-button-toggle>
+
+    <mat-button-toggle value='italian'>
+      IT
+    </mat-button-toggle>
+
+    <mat-button-toggle value='polish'>
+      PL
+    </mat-button-toggle>
+
+  </mat-button-toggle-group>
+  <mat-card id='trainer-guess-guessed-word'>
+    <mat-card-header>
+      Guessed Word
+    </mat-card-header>
+    <mat-card-content>
+      {{ guessedWord }}
+    </mat-card-content>
+  </mat-card>
+  <mat-card id='trainer-guess-actual-translation'>
+    <mat-card-header>
+      Actual Translation
+    </mat-card-header>
+    <mat-card-content>
+      {{ actualTranslation }}
+    </mat-card-content>
+  </mat-card>
   <form [formGroup]='guessForm' (ngSubmit)='commitGuess()'>
     <mat-form-field>
       <mat-label>Guess</mat-label>

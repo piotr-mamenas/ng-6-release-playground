@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MatInputModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
+import { MatButtonToggleModule } from '@angular/material';
 
 // MODULE COMPONENTS
 import { GuessInputComponent } from './components/guess-input/guess-input.component';
@@ -22,7 +23,8 @@ import { TrainerComponent } from './trainer.component';
     HttpModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonToggleModule
   ],
   declarations: [
     GuessInputComponent,

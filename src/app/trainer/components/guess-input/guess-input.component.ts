@@ -9,7 +9,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class GuessInputComponent {
   isCommitted : boolean = false;
-
+  guessedWord : string = 'Hola';
+  actualTranslation : string = 'Hello';
+  
   guessForm = new FormGroup({
     guessedPhrase: new FormControl('', Validators.required)
   });
