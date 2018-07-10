@@ -1,84 +1,97 @@
-
 <div id='trainer-guess'>
-  <mat-card id='trainer-guess-guessed-word'>
-    <mat-card-header>
-      Guessed Word
-      <mat-button-toggle-group id='trainer-guess-language-from' #languageFromSelected='matButtonToggleGroup'>
-        <mat-button-toggle value='english'>
-          EN
-        </mat-button-toggle>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-6'>
+        <mat-card id='trainer-guess-guessed-word'>
+          <mat-card-header>
+            <div class='row'>
+              <div class='col-md-6'>
+                Guessed Word
+              </div>
+              <div class='col-md-6'>
+                <mat-button-toggle-group id='trainer-guess-language-from' #languageFromSelected='matButtonToggleGroup'>
+                  <mat-button-toggle value='english'>
+                    EN
+                  </mat-button-toggle>
 
-        <mat-button-toggle value='german'>
-          DE
-        </mat-button-toggle>
+                  <mat-button-toggle value='german'>
+                    DE
+                  </mat-button-toggle>
 
-        <mat-button-toggle value='french'>
-          FR
-        </mat-button-toggle>
+                  <mat-button-toggle value='french'>
+                    FR
+                  </mat-button-toggle>
 
-        <mat-button-toggle value='spanish'>
-          ES
-        </mat-button-toggle>
+                  <mat-button-toggle value='spanish'>
+                    ES
+                  </mat-button-toggle>
 
-        <mat-button-toggle value='italian'>
-          IT
-        </mat-button-toggle>
+                  <mat-button-toggle value='italian'>
+                    IT
+                  </mat-button-toggle>
 
-        <mat-button-toggle value='polish'>
-          PL
-        </mat-button-toggle>
+                  <mat-button-toggle value='polish'>
+                    PL
+                  </mat-button-toggle>
 
-      </mat-button-toggle-group>
-    </mat-card-header>
-    <mat-card-content>
-      {{ guessedWord }}
-    </mat-card-content>
-  </mat-card>
-  <mat-card id='trainer-guess-actual-translation'>
-    <mat-card-header>
-      <div class='row'>
-        <div class='col-md-6'>
-          Actual Translation
-        </div>
-        <div class='col-md-6'>
-          <mat-button-toggle-group id='trainer-guess-language-to' #languageToSelected='matButtonToggleGroup'>
-            <mat-button-toggle value='english'>
-              EN
-            </mat-button-toggle>
-
-            <mat-button-toggle value='german'>
-              DE
-            </mat-button-toggle>
-
-            <mat-button-toggle value='french'>
-              FR
-            </mat-button-toggle>
-            <mat-button-toggle value='spanish'>
-              ES
-            </mat-button-toggle>
-            <mat-button-toggle value='italian'>
-              IT
-            </mat-button-toggle>
-            <mat-button-toggle value='polish'>
-              PL
-            </mat-button-toggle>
-          </mat-button-toggle-group>
-        </div>
+                </mat-button-toggle-group>
+              </div>
+            </div>
+          </mat-card-header>
+          <mat-card-content>
+            {{ guessedWord }}
+          </mat-card-content>
+        </mat-card>
       </div>
-    </mat-card-header>
-    <mat-card-content>
-      {{ actualTranslation }}
-    </mat-card-content>
-  </mat-card>
-  <form [formGroup]='guessForm' (ngSubmit)='commitGuess()'>
-    <mat-form-field>
-      <mat-label>Guess</mat-label>
-      <input matInput formControlName='guessedPhrase' required>
-      <mat-error>
-        <span *ngIf="guessForm.get('guessedPhrase').value.invalid && guessForm.get('guessedPhrase').value.touched">Guessed phrase cannot be empty</span>
-      </mat-error>
-    </mat-form-field>
-    <button mat-button><span class='fa fa-check'></span> Commit</button>
-    <button type='button' mat-button (click)="overrideGuess()"><span class='fa fa-repeat'></span> Override</button>
-  </form>
+      <div class='col-md-6'>
+        <mat-card id='trainer-guess-actual-translation'>
+          <mat-card-header>
+            <div class='row'>
+              <div class='col-md-6'>
+                Actual Translation
+              </div>
+              <div class='col-md-6'>
+                <mat-button-toggle-group id='trainer-guess-language-to' #languageToSelected='matButtonToggleGroup'>
+                  <mat-button-toggle value='english'>
+                    EN
+                  </mat-button-toggle>
+
+                  <mat-button-toggle value='german'>
+                    DE
+                  </mat-button-toggle>
+
+                  <mat-button-toggle value='french'>
+                    FR
+                  </mat-button-toggle>
+                  <mat-button-toggle value='spanish'>
+                    ES
+                  </mat-button-toggle>
+                  <mat-button-toggle value='italian'>
+                    IT
+                  </mat-button-toggle>
+                  <mat-button-toggle value='polish'>
+                    PL
+                  </mat-button-toggle>
+                </mat-button-toggle-group>
+              </div>
+            </div>
+          </mat-card-header>
+          <mat-card-content>
+            {{ actualTranslation }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <form [formGroup]='guessForm' (ngSubmit)='commitGuess()'>
+      <mat-form-field>
+        <mat-label>Guess</mat-label>
+        <input matInput formControlName='guessedPhrase' required>
+        <mat-error>
+          <span *ngIf="guessForm.get('guessedPhrase').value.invalid && guessForm.get('guessedPhrase').value.touched">Guessed phrase cannot be empty</span>
+        </mat-error>
+      </mat-form-field>
+      <button mat-button><span class='fa fa-check'></span> Commit</button>
+      <button type='button' mat-button (click)="overrideGuess()"><span class='fa fa-repeat'></span> Override</button>
+    </form>
+  </div>
 </div>
