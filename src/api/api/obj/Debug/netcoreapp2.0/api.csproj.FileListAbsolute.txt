@@ -1,0 +1,10 @@
+D:\Project\ng-6-release-playground\src\api\api\bin\Debug\netcoreapp2.0\api.deps.json
+D:\Project\ng-6-release-playground\src\api\api\bin\Debug\netcoreapp2.0\api.runtimeconfig.json
+D:\Project\ng-6-release-playground\src\api\api\bin\Debug\netcoreapp2.0\api.runtimeconfig.dev.json
+D:\Project\ng-6-release-playground\src\api\api\bin\Debug\netcoreapp2.0\api.dll
+D:\Project\ng-6-release-playground\src\api\api\obj\Debug\netcoreapp2.0\api.csproj.CoreCompileInputs.cache
+D:\Project\ng-6-release-playground\src\api\api\obj\Debug\netcoreapp2.0\api.AssemblyInfoInputs.cache
+D:\Project\ng-6-release-playground\src\api\api\obj\Debug\netcoreapp2.0\api.AssemblyInfo.cs
+D:\Project\ng-6-release-playground\src\api\api\bin\Debug\netcoreapp2.0\api.pdb
+D:\Project\ng-6-release-playground\src\api\api\obj\Debug\netcoreapp2.0\api.dll
+D:\Project\ng-6-release-playground\src\api\api\obj\Debug\netcoreapp2.0\api.pdb
