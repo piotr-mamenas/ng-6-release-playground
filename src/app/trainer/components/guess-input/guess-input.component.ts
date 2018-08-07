@@ -3,7 +3,7 @@ import { OnInit } from '@angular/core';
 
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { currentTranslationRow } from './../../../dummy-data/translation-data';
+import { currentTranslationData } from './../../../dummy-data/translation-data';
 import { TranslationRow } from './../../../interfaces/translations-row';
 
 @Component({
@@ -18,17 +18,24 @@ export class GuessInputComponent implements OnInit {
 
   guessedWord : string = 'Hola';
   actualTranslation : string = 'Hello';
-  currentTranslationRow : TranslationRow[];
+  currentTranslationData : TranslationRow[];
 
   guessForm = new FormGroup({
     guessedPhrase: new FormControl('', Validators.required)
   });
 
+  fetchNextRow(){
+    if (this.currentItem > currentTranslationData.length){
+      // fetch new data
+    }
+    return currentTranslationData[this.currentItem];
+  }
+
   ngOnInit(){
     this.isCommitted = false;
     this.isCorrect = false;
     this.currentItem = 0;
-    this.currentTranslationRow = currentTranslationRow;
+    this.currentTranslationData = currentTranslationData;
   }
 
   commitGuess() {

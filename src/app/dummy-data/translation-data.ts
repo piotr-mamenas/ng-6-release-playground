@@ -1,6 +1,6 @@
 import { TranslationRow } from './../interfaces/translations-row';
 
-export const currentTranslationRow : TranslationRow[] =
+export const currentTranslationData : TranslationRow[] =
 [
   { id: 1, english: 'hello', deutsch: 'hallo', francais: 'salut', espanol: 'hola', italiano: '', polski: ''},
   { id: 2, english: 'output', deutsch: 'aufgabe', francais: 'tache', espanol: 'mancha', italiano: '', polski: ''},
