@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { TranslationRow } from './interfaces/translations-row';
 
 const MOCK_DATA: TranslationRow[] = [
-  { id: 1, english: "Hello", deutsch: "Hallo", francais: "Salut", espanol: "Hola", italiano: "", polski: "Czesc" }
+  { guid: "ABC-000-000", english: "Hello", deutsch: "Hallo", francais: "Salut", espanol: "Hola", italiano: "", polski: "Czesc" }
 ]
 
 @Component({

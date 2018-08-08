@@ -1,5 +1,5 @@
 export interface TranslationRow {
-  id: number,
+  guid: string,
   english: string,
   deutsch: string,
   francais: string,

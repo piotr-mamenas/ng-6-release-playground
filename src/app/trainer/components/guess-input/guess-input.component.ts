@@ -27,6 +27,7 @@ export class GuessInputComponent implements OnInit {
   fetchNextRow(){
     if (this.currentItem > currentTranslationData.length){
       // fetch new data
+      this.currentItem = 0;
     }
     return currentTranslationData[this.currentItem];
   }
@@ -46,6 +47,7 @@ export class GuessInputComponent implements OnInit {
         // service - record mistake and reload new dataset if needed
       }
     }
+
     if (this.guessForm.valid){
       this.isCommitted = true;
       if(this.guessForm.value.guessedPhrase == this.actualTranslation){

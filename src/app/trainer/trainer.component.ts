@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { TrainerService } from './services/trainer.service';
+import { TranslationRow } from './../interfaces/translations-row';
 
 @Component({
   selector: 'app-trainer',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./trainer.component.scss']
 })
 
-export class TrainerComponent {
+export class TrainerComponent implements OnInit {
+  translations : TranslationRow[];
+  
+  constructor(private trainerService: TrainerService) { }
+
+  ngOnInit() {
+    this.trainerService.getTranslations().subscribe(translations => {
+      this.translations = translations;
+    });
+  }
 }

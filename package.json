@@ -1,11 +1,11 @@
 {
-  "name": "angular-io-example",
+  "name": "",
   "version": "1.0.0",
   "private": true,
-  "description": "Example project from an angular.io guide.",
+  "description": "",
   "scripts": {
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "test": "ng test",
     "build": "ng build --prod",
     "e2e": "ng e2e",

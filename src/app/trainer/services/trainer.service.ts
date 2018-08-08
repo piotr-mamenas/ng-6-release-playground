@@ -1,5 +1,6 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class TrainerService {
@@ -16,5 +17,10 @@ export class TrainerService {
 
   getAlternativeTranslation(translationId : number) {
     // api call
+  }
+
+  getTranslations() {
+    return this.http.get('api/translations')
+    .pipe(map(res => res.json()));
   }
 }

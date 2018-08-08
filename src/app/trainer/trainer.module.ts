@@ -15,6 +15,9 @@ import { GuessInputComponent } from './components/guess-input/guess-input.compon
 import { AnswerDisplayComponent } from './components/answer-display/answer-display.component';
 import { TrainerComponent } from './trainer.component';
 
+// MODULE SERVICES
+import { TrainerService } from './services/trainer.service';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,6 +33,9 @@ import { TrainerComponent } from './trainer.component';
     GuessInputComponent,
     AnswerDisplayComponent,
     TrainerComponent
+  ],
+  providers: [
+    TrainerService
   ],
   exports: [
   ]
