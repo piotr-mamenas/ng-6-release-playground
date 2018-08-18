@@ -20,7 +20,7 @@ export class TrainerService {
   }
 
   getTranslations() {
-    return this.http.get('api/translations')
+    return this.http.get('/api/trainer/translations')
     .pipe(map(res => res.json()));
   }
 }

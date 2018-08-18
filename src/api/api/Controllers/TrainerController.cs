@@ -1,17 +1,30 @@
 using System;
 using System.Collections.Generic;
+using api.Domain.Interfaces;
 using api.Resources;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
     [Route("api/[controller]")]
     [Produces("application/json")]
-    public class TrainerController : Controller
+    public class TrainerController : BaseController
     {
-        public TrainerController()
+        private readonly IGuessAttemptRepository _guessAttemptRepository;
+        private readonly ITrainingSessionRepository _trainingSessionRepository;
+        private readonly ITranslationRowRepository _translationRowRepository;
+
+        public TrainerController(IGuessAttemptRepository guessAttemptRepository,
+            ITrainingSessionRepository trainingSessionRepository,
+            ITranslationRowRepository translationRowRepository,
+            IUnitOfWork unitOfWork,
+            IMapper mapper)
+            : base(mapper, unitOfWork)
         {
-            
+            _guessAttemptRepository = guessAttemptRepository;
+            _trainingSessionRepository = trainingSessionRepository;
+            _translationRowRepository = translationRowRepository;
         }
 
         [HttpGet("translations")]
