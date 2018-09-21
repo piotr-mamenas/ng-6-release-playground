@@ -11,7 +11,7 @@ import { TranslationRow } from './../interfaces/translations-row';
 
 export class TrainerComponent implements OnInit {
   translations : TranslationRow[];
-  
+
   constructor(private trainerService: TrainerService) { }
 
   ngOnInit() {

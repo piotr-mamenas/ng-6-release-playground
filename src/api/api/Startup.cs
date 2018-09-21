@@ -43,6 +43,7 @@ namespace api
                 app.UseDeveloperExceptionPage();
             }
 
+            
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", true, true)
@@ -50,7 +51,7 @@ namespace api
                 .AddEnvironmentVariables();
 
             var config = builder.Build();
-
+            
             app.UseMvc();
         }
     }
